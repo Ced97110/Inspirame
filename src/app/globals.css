@@ -1,0 +1,291 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Nothing You Could Do';
+  src: url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&subset=latin&display=swap');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #F3CE28 ;
+}
+
+::-webkit-scrollbar-track {
+  background: #e6f1ff;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #57cbff;
+  border: 3px solid  rgba(100, 255, 218, 0.1);
+  border-radius: 10px;
+}
+
+.nothingYouCouldDo {
+  font-family: 'Nothing You Could Do', cursive;
+}
+
+@supports (font: -apple-system-body) and (-webkit-appearance: none) {
+  img[loading='lazy'] {
+    clip-path: inset(0.6px);
+  }
+}
+
+@layer utilities {
+  .font-smooth {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.nothing-you-could-do-regular {
+  font-family: "Nothing You Could Do",;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.wave-container-video {
+  background: transparent;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  
+}
+
+.wave-container-video > svg {
+  display: block;
+}
+
+
+.wave-container {
+  background: transparent;
+  position: relative;
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+  
+}
+
+
+.phone-tab {
+  border-radius: 5%;
+  width: 100px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 22px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+
+}
+
+@media (min-width: 768px) {
+  .phone-tab {
+    width: 150px;
+    height: 100px;
+  }
+}
+
+
+
+
+
+.link-yellow-sub {
+  color:#fff;
+  position:relative;
+  font-size: 16px;
+  text-decoration: none;
+  list-style: none;
+
+}
+
+.link-yellow-sub::before {
+  content:'';
+  position:absolute;
+  width:100%;
+  height:2px;
+  background: #FCDC2A;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: all 0.6s ease;
+}
+
+.link-yellow-sub::before {
+  bottom: 0;
+  left: 0;
+
+}
+
+.link-yellow-sub:hover::before {
+  transform: scaleX(1);
+ 
+}
+
+.logo-container {
+  background-image: url('https://res.cloudinary.com/dqr6k0yey/image/upload/f_auto,q_auto/coverwhite');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-inline: 16px;
+  object-fit: contain;
+}
+
+
+@media(min-width: 768px) {
+  .logo-container {
+    background-image: url('https://res.cloudinary.com/dqr6k0yey/image/upload/f_auto,q_auto/coverwhite-desktop');
+  }
+}
+
+
+ 
+.container-block {
+  height: 300vh;
+  position: relative;
+}
+
+.sticky-block {
+  position: sticky;
+  overflow: hidden;
+  top: 0;
+  height: 100vh;
+}
+
+.el-block {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s ease-out;
+}
+
+.imageContainer {
+  position: relative;
+  width: 25vw;
+  height: 25vh;
+}
+
+.el-block:nth-of-type(2) .imageContainer {
+  top: -30vh;
+  left: 5vw;
+  width: 35vw;
+  height: 30vh;
+}
+
+.el-block:nth-of-type(3) .imageContainer {
+  bottom: 20vh;
+  left: -25vw;
+  width: 20vw;
+  height: 50vh;
+}
+
+.el-block:nth-of-type(4) .imageContainer {
+  top: 30vh;
+  left: 27.5vw;
+  width: 25vw;
+  height: 85vh;
+}
+
+.el-block:nth-of-type(5) .imageContainer {
+  top: 27.5vh;
+  left: 5vw;
+  width: 10vw;
+  height: 25vh;
+}
+
+.el-block:nth-of-type(6) .imageContainer {
+  top: 27.5vh;
+  right:20vw;
+  width: 30vw;
+  height: 25vh;
+}
+
+.el-block:nth-of-type(7) .imageContainer {
+  top: 22.5vh;
+  left: 5vw;
+  width: 15vw;
+  height: 15vh;
+}
+
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.scroll-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  will-change: transform;
+
+  .ghost {
+    width: 100vw;
+  }
+}
+
+.thumbnails-container {
+  position: relative;
+  height: 100vh;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  padding: 0px 160px;
+  background-color: black;
+  border: 40px solid red;
+
+  .thumbnails {
+    position: relative;
+    display: flex;
+    border: 20px solid yellow; 
+
+    & > *:not(:last-child) {
+      margin-right: 45px;
+    }
+
+    .thumbnail {
+      height: 40vh;
+      width: 700px;
+      background-color: blue;
+      border: 15px solid magenta;
+    }
+  }
+}
+
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
