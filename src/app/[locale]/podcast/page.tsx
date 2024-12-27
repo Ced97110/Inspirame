@@ -1,4 +1,3 @@
-import WrapperPodcats from '@components/components/sections/podcasts/wrapper-podcasts';
 import TranslationsProvider from '@components/utils/translationProvider';
 import initTranslations from '@components/app/i18n';
 import { Metadata } from 'next';
