@@ -38,8 +38,8 @@ const ContactForm = () => {
     setLoading(true);
 
     emailjs.send(
-      'service_9tkvzjs',   // Replace with your EmailJS service ID
-      'template_4ovyphp',  // Replace with your EmailJS template ID
+      process.env.NEXT_PUBLIC_SERVICE_ID,
+      process.env.NEXT_TEMPLATE_EMAIL,  // Replace with your EmailJS template ID
       formData,
       '01YcvrrpqvRu5lPdO'  // Replace with your EmailJS user ID
     ).then((response) => {
