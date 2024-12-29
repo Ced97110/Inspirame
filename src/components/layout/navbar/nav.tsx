@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import NavLogo from "../logo/logo-file";
 import { NavLink } from "./navlinks";
 import { CTAs } from "./cta";
@@ -14,6 +14,7 @@ import { FiArrowRight } from "react-icons/fi";
 const FlyoutNav = () => {
 
   const { t } = useTranslation();
+  
 
   const menuItems = useMemo(() => ([
     { name: t('about-us'), url: '/about-us', ariaLabel: t('about-us') },
@@ -43,6 +44,8 @@ const FlyoutNav = () => {
     { name: t('contact-us'), url: '/contact-us', ariaLabel: t('contact-us') },
   ]), [t]);
 
+  
+
   const Links = () => {
     return (
       <div className="flex items-center gap-6" role="navigation" aria-label="Main navigation">
@@ -69,7 +72,7 @@ const FlyoutNav = () => {
       <>
         <nav
           className={`fixed top-0 left-0 right-0 z-50 w-full text-white 
-          transition-all duration-300 ease-out px-5 lg:px-8 2xl:px-96 "bg-neutral-950 shadow-xl bg-black py-6`}
+          transition-all duration-300 ease-out px-5 lg:px-8  2xl:px-64 "bg-neutral-950 shadow-xl bg-black py-6`}
           role="navigation"
           aria-label="Primary navigation"
         >  

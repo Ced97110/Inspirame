@@ -71,6 +71,8 @@ export default function MainPageLayout({
   children,
   params: { locale },
 }: MainPageLayoutProps) {
+
+  
  
   return (
     <html lang={locale} dir={dir(locale)} className={`${raleway.variable} font-antialiased font-smooth box-border w-full`}>

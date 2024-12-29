@@ -1,7 +1,6 @@
 
-import plugin from 'tailwindcss/plugin';
 import type { Config } from "tailwindcss";
-import flowbite from "flowbite-react/tailwind";
+
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
